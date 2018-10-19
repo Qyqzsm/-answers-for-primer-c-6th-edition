@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+#include<string>
+
+struct CandyBar 
+{
+	string Name;
+	double weight;
+	int calorie;
+
+};
+
+int main()
+{
+
+	CandyBar snacks[3] =//snack[3] is "\0", not a aviliable room.
+	{
+		{"Cheese",2.56,500},
+		{"Cake",3.58,600},
+		{"Cookie",4.66,200}
+	};
+	for (int i = 0; i < 3; i++)
+	{
+		cout << "Names: " << snacks[i].Name << endl;
+		cout << "Weights: " << snacks[i].weight << endl;
+		cout << "Calories: " << snacks[i].calorie << endl;
+	}
+	system("pause");
+	return 0;
+	
+
+}
