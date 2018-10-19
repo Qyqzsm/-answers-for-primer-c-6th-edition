@@ -1,0 +1,34 @@
+#include<iostream>
+#include<string>;
+using namespace std;
+
+struct received
+{
+	string Name;
+	double weight;
+	double diameter;
+};
+
+int main()
+{
+	received *ps = new received;
+	cout << "Please enter the diameter of pizza : " << endl;
+	cin >> ps->diameter;
+	cin.get();/*将键盘输入的回车键换行符从输入缓冲区拿走，否则getline无法执行*/
+	cout << "Please enter the name of pizza company: " << endl;
+	getline(cin, ps->Name);
+	cout << "Please enter the weight of pizza : " << endl;
+	cin >> (*ps).weight;
+	cout << "There is the information of your pizza: " << endl;
+
+	cout << "Name: " << ps->Name << endl;
+
+	cout << "Weight: " << ps->weight << endl;
+
+	cout << "Diameter: " << ps->diameter << endl;
+
+	system("pause");
+
+	return 0;
+
+}
