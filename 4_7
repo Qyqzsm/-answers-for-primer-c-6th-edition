@@ -1,0 +1,29 @@
+#include<iostream>
+
+#include<string>;
+using namespace std;
+
+struct pizza
+{
+	string Names;
+	double Diameter;
+	double Weight;
+};
+
+int main()
+{
+	cout << "Please enter the name of pizza company: " << endl;
+	pizza received;
+	getline(cin, received.Names);
+	cout << "Please enter the diameter of pizza : " << endl;
+	cin >> received.Diameter;
+	cout << "Please enter the weight of pizza : " << endl;
+	cin >> received.Weight;
+	cout << endl;
+	cout << "There is the information of your pizza: " << endl;
+	cout << "Name: " << received.Names << endl;
+	cout << "Weight: " << received.Weight << endl;
+	cout << "Diameter: " << received.Diameter << endl;
+	system("pause");
+	return 0;
+}
