@@ -1,0 +1,25 @@
+#include<iostream>
+#include<cctype>
+using namespace std;
+
+int main()
+{
+	char ch;
+	cout << "Enter your input, type \" @ \" to quit.\n";
+	cin.get(ch);
+	while (ch != '@')
+	{
+		if (!isdigit(ch))
+		{
+			if (isupper(ch)) 
+				ch=tolower(ch);
+			else if (islower(ch)) 
+				ch=toupper(ch);
+			cout << ch;
+		}
+		
+		cin.get(ch);
+	}
+	system("pause");
+	return 0;
+}
