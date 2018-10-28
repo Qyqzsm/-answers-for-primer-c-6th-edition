@@ -1,0 +1,34 @@
+#include<iostream>
+#include<array>
+using namespace std;
+#define Size 10
+
+int main()
+{
+	array<double, Size> donations;
+
+	int count1 = 0;
+	int count2 = 0;
+	double sum = 0;
+	double avg;
+	double donation;
+
+//Array initializition.
+	for (int i = 0; (i < Size)&&(cin>>donation); i++)
+	{
+		donations[i] = donation;
+		count1++;
+		sum+=donations[i];
+	}
+
+	avg = sum / count1;
+  
+//Get how many numbers are bigger than their average. 
+	for (int j = 0; j < count1; j++)
+		if (avg < donations[j]) count2++;
+	cout << "Average: " << avg << endl;
+	cout << "Bigger than average: " << count2 << endl;
+	system("pause");
+	return 0;
+
+}
