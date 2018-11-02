@@ -1,0 +1,17 @@
+#include<fstream>
+#include<iostream>
+using namespace std;
+int main()
+{
+	ifstream infile;//infile is an object.
+	infile.open("6_8.txt");//This text should be saved in the file of the program to make it detected.
+	char ch;
+	int characters = 0;
+	while (infile >> ch)//read a character from the object infile..
+		characters++;
+	infile.close();
+	cout << "There are " << characters << " characters in the text.\n";
+	system("pause");
+	return 0;
+
+	
